@@ -1,6 +1,6 @@
 fun main() {
     var name = "Matthew"
-
+    // Not required
     var brand: String? = "Calyse"
     brand = null
 
