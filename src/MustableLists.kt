@@ -1,5 +1,5 @@
 fun main() {
-    val names = mutableListOf<String>(
+    val names = mutableListOf(
         "Calyse",
         "Matt",
         "Sean",
