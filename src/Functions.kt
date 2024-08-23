@@ -1,6 +1,8 @@
 fun main() {
     welcome("Calyse", 20)
     quote()
+    welcome(age=25, name="Matthew")
+    quote()
 }
 
 fun welcome(name: String, age: Int) {
