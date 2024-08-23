@@ -5,6 +5,8 @@ fun main() {
     quote()
     welcome("Glenn")
     quote()
+    println()
+    println(double(10))
 //
     foo(bar = {
         println("Bar as a function")
@@ -31,4 +33,8 @@ fun quote() {
 fun foo(bar: () -> Unit) {
     println("Bar function")
     bar()
+}
+
+fun double(number: Int) : Int {
+    return number * 2
 }
