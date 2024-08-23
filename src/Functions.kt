@@ -1,10 +1,15 @@
 fun main() {
-    welcome()
+    welcome("Calyse", 20)
     quote()
 }
 
-fun welcome() {
-    println("Welcome!")
+fun welcome(name: String, age: Int) {
+    println("Welcome $name!")
+    if (age >= 16) {
+        println("$name is an adult")
+    } else {
+        println("$name is not an adult")
+    }
 }
 
 fun quote() {
