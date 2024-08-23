@@ -5,6 +5,11 @@ fun main() {
     quote()
     welcome("Glenn")
     quote()
+//
+    foo(bar = {
+        println("Bar as a function")
+    })
+    foo { println("This also works") }
 }
 
 fun welcome(name: String, age: Int = -1) {
@@ -21,4 +26,9 @@ fun welcome(name: String, age: Int = -1) {
 
 fun quote() {
     println("Come on in!")
+}
+
+fun foo(bar: () -> Unit) {
+    println("Bar function")
+    bar()
 }
