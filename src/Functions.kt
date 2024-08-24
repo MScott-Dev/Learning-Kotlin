@@ -35,6 +35,9 @@ fun foo(bar: () -> Unit) {
     bar()
 }
 
-fun double(number: Int) : Int {
-    return number * 2
-}
+//fun double(number: Int) : Int {
+//    return number * 2
+//}
+
+// single expression function
+fun double(n: Int) : Int = n * 2
