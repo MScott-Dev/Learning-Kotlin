@@ -7,6 +7,8 @@ fun main() {
     quote()
     println()
     println(double(10))
+    println(twoValues())
+    println(threeValues())
 //
     foo(bar = {
         println("Bar as a function")
@@ -40,4 +42,12 @@ fun foo(bar: () -> Unit) {
 //}
 
 // single expression function
-fun double(n: Int) : Int = n * 2
+fun double(n: Int) = n * 2
+
+fun twoValues(): Pair<String, Int> {
+    return "Test" to 20
+}
+
+fun threeValues(): Triple<String, Int, Char> {
+    return Triple("Test", 20, 'Z' )
+}
