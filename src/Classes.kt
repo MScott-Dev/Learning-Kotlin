@@ -6,6 +6,7 @@ fun main() {
     val phone = SmartDevice("Google Pixel", "Blue", 700.0, true)
     println("${phone.brand} has a ${phone.color} one for ${phone.price}!")
     phone.getDeviceState()
+    println(tv.toString())
 }
 
 // Blueprint
@@ -27,4 +28,9 @@ class SmartDevice constructor(
     fun getDeviceState() {
         println("$brand is currently on: $state")
     }
+//    Generate toString()
+    override fun toString(): String {
+        return "SmartDevice(brand='$brand', color='$color', price=$price, state=$state)"
+    }
+
 }
