@@ -1,18 +1,30 @@
 fun main() {
-    val tv = SmartDevice()
-    tv.brand = "Samsung"
-    tv.price = 1000.0
-    val phone = SmartDevice()
-    phone.brand = "Google"
-    phone.price = 700.0
-    phone.color = "Blue"
+    val tv = SmartDevice("Samsung Smart TV QLED", "Black", 1000.0, false)
+    println("${tv.brand} is ${tv.price}")
+    tv.turnOn()
+    tv.getDeviceState()
+    val phone = SmartDevice("Google Pixel", "Blue", 700.0, true)
+    println("${phone.brand} has a ${phone.color} one for ${phone.price}!")
+    phone.getDeviceState()
 }
 
 // Blueprint
-class  SmartDevice {
-    //    properties
-    //    behaviors
-    var brand: String = ""
-    var color: String = ""
-    var price: Double = 0.0
+class SmartDevice constructor(
+    var brand: String,
+    var color: String,
+    var price: Double,
+    var state: Boolean
+) {
+    //    method/functions
+    fun turnOn() {
+        state = true
+        println("$brand is switching on")
+    }
+    fun turnOff() {
+        state = false
+        println("$brand is switching off")
+    }
+    fun getDeviceState() {
+        println("$brand is currently on: $state")
+    }
 }
